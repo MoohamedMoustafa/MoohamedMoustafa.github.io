@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Mark</title>
+    <!-- fav icon -->
+     <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+    <!-- Font Awesom -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container d-flex flex-column justify-content-center align-items-center">
+            <h1 class="pacifico-regular p-3 mt-3">Bookmarker</h1>
+            <!-- Start BookMark Body -->
+            <div class="bookmark-body p-3 py-4 mt-4 w-100 d-flex flex-column justify-content-center align-items-center">
+                <h2 class="righteous-regular ">Bookmark your favorite sites</h2>
+
+                <div class="site-name d-flex flex-column justify-content-center align-items-lg-start p-2  ">
+                    <label class="mb-2" for="siteName"> <i class="fa-regular fa-bookmark mx-2"></i> Site Name</label>
+                    <input oninput="validateInput(this)" id="siteName" type="text" class="form-control">
+                    <div id="nameAlert" class="d-none alert alert-danger w-100 p-2 mt-2" >
+                        Site name should start with uppercase letter then at least 3 characters</div>
+                </div>
+
+                <div class="site-url d-flex flex-column justify-content-center align-items-start p-2  mb-3">
+                    <label class="mb-2" for="siteUrl"> <i class="fa-solid fa-link mx-2"></i>Site URL</label>
+                    <input oninput="validateInput(this)" id="siteUrl" type="text" class="form-control">
+                    <div id="urlAlert" class="d-none alert alert-danger w-100 p-2 mt-2" >
+                        Enter a valid URL starting with http:// or https:// (optional), followed by a domain name (e.g., example.com) and an optional path or query (e.g., /page). Avoid spaces or invalid characters.</div>
+                </div>
+                <button id="btnSubmit" class="btn btn-danger px-5">Submit</button>
+            </div>
+            <!-- End BookMark Body -->
+            <!-- Start Table -->
+            <table class="table mt-4 text-center">
+                <thead class="">
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- <tr>
+                        <td class="fw-light">1</td>
+                        <td class="fw-light">Google</td>
+                        <td>
+                            <button class="btn btn-success"><i class="fa-regular fa-eye"></i> Visit</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <!-- End Table -->
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
